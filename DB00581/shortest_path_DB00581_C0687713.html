@@ -1,0 +1,50 @@
+<style type="text/css" media="screen">
+    .imageblock .content img {
+        max-width: 900px;
+        max-height: 600px;
+    }
+  .deck h3 {
+    display: block !important;
+    margin-bottom:8px;
+    margin-top:5px;
+  }
+  .listingblock {
+    margin:8px;
+  }
+  .pull-bottom {
+    position:relative;
+    bottom:1em;
+  }
+</style>
+<style type="text/css" media="screen">
+#editor.maximize-editor .CodeMirror-code {
+ font-size:40px;
+ line-height:45px;
+}
+</style><article class="guide">
+  <carousel class="deck container-fluid">
+
+<slide class="row-fluid">
+  <div class="col-sm-12">
+    <br/>
+    <h3>Direct Connection</h3>
+    <br/>
+    <div>
+   <h4>There is at least one edge between Lactulose and Gastrointestinal pain</h4>
+   <br/>
+   <div class="paragraph">
+<p>To view the edge(s) between Lactulose (DB00581) and Gastrointestinal pain (C0687713), click on the Cypher query below and then press the play button on the upper right corner of the screen!</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->MATCH path=(n1)-[]-(n2) 
+WHERE n1.identifier ='DB00581'
+AND n2.identifier = 'C0687713'
+RETURN path<!--/code--></pre>
+</div>
+</div>
+    </div>
+  </div>
+</slide>   
+  </carousel>
+</article>
