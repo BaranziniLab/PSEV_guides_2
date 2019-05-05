@@ -1,0 +1,53 @@
+<style type="text/css" media="screen">
+    .imageblock .content img {
+        max-width: 900px;
+        max-height: 600px;
+    }
+  .deck h3 {
+    display: block !important;
+    margin-bottom:8px;
+    margin-top:5px;
+  }
+  .listingblock {
+    margin:8px;
+  }
+  .pull-bottom {
+    position:relative;
+    bottom:1em;
+  }
+</style>
+<style type="text/css" media="screen">
+#editor.maximize-editor .CodeMirror-code {
+ font-size:40px;
+ line-height:45px;
+}
+</style><article class="guide">
+  <carousel class="deck container-fluid">
+
+<slide class="row-fluid">
+  <div class="col-sm-12">
+    <br/>
+    <h3>Shortest Paths</h3>
+    <br/>
+    <div>
+   <h4>How to travel from Gemfibrozil to the Dysuria Symptom:</h4>
+   <br/>
+   <div class="paragraph">
+<p>Currently SPOKE doesn’t contain an edge between Gemfibrozil (DB01241) and Dysuria (D053159). <br/>To find paths between DB01241 and D053159 click on the Cypher query below and then the play button on the upper right corner of the screen! <br/>If there are no paths (max # of edges=3) between these nodes it will say “(no changes, no records)”.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre mode="cypher"  class="highlight pre-scrollable programlisting cm-s-neo code runnable standalone-example ng-binding" data-lang="cypher" lang="cypher"><!--code class="cypher language-cypher"-->MATCH (n) where n.identifier IN ['DB01241']
+MATCH (m) where m.identifier IN ['D053159']
+WITH collect(n) as nodes, collect(m) as nodes_2
+UNWIND nodes as n
+UNWIND nodes_2 as m
+MATCH path = allShortestPaths( (n)-[*..3]-(m) )
+RETURN path<!--/code--></pre>
+</div>
+</div>
+    </div>
+  </div>
+</slide>   
+  </carousel>
+</article>
